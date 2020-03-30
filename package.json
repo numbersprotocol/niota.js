@@ -1,8 +1,8 @@
 {
-  "name": "niota.js",
-  "version": "0.1.0",
-  "description": "the first initial testing package for mylog14 ledger",
-  "main": "main.js",
+  "name": "@numbersprotocol/niota",
+  "version": "0.1.1",
+  "description": "Wrappers of IOTA used in Numbers.",
+  "main": "src/index.js",
   "scripts": {
     "test": "node main.js"
   },
@@ -10,12 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/numbersprotocol/niota.js"
   },
-  "keywords": [
-    "iota",
-    "mydata",
-    "covid19"
-  ],
-  "author": "MyData Taiwan Hub",
+  "keywords": [ "iota" ],
+  "author": "Numbers",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/numbersprotocol/niota.js/issues"
