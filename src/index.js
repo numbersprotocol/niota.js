@@ -48,7 +48,7 @@ async function sendMessage(index, raw_msg, signature) {
 
     // // client will connect to testnet by default
     const client = new ClientBuilder()
-        .node('https://api.hornet-0.testnet.chrysalis2.com:443')    // custom node
+        .node('https://chrysalis-nodes.iota.org')    // custom node
         .localPow(true)                                         // pow is done locally
         .disableNodeSync()                                      // even non-synced node is fine - do not use in production
         .build();
