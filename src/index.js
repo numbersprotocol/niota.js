@@ -42,29 +42,29 @@ function runTransaction(address, seed, raw_msg) {
 
 /* This method based on chrysalis (IOTA 1.5)
  */
-async function sendMessage(index,raw_msg,signature) {
+async function sendMessage(index, raw_msg, signature) {
 
     const { ClientBuilder } = require('@iota/client')
 
     // // client will connect to testnet by default
     const client = new ClientBuilder()
-    .node('https://api.hornet-0.testnet.chrysalis2.com:443')    // custom node
-    .localPow(true)                                         // pow is done locally
-    .disableNodeSync()                                      // even non-synced node is fine - do not use in production
-    .build();
+        .node('https://chrysalis-nodes.iota.org')    // custom node
+        .localPow(true)                                         // pow is done locally
+        .disableNodeSync()                                      // even non-synced node is fine - do not use in production
+        .build();
 
-    const data_str = JSON.stringify( raw_msg );
+    const data_str = JSON.stringify(raw_msg);
 
     const message_data = JSON.stringify({
-        "data":data_str,
-        "signature":signature
-      });
-     
+        "data": data_str,
+        "signature": signature
+    });
+
     const message = await client.message()
         .index(index)
         .data(message_data)
         .submit();
-    console.log(message);
+    return message;
 }
 
 module.exports = {
