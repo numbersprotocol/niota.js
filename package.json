@@ -4,7 +4,7 @@
   "description": "Wrappers of IOTA used in Numbers.",
   "main": "src/index.js",
   "scripts": {
-    "test": "node main.js"
+    "test": "node src/index.js"
   },
   "repository": {
     "type": "git",
